@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/profile/profile-education/bootcamp/bootcamp.edit.controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">app/profile/profile-education/bootcamp/bootcamp.edit.controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">25.45% <small>(14 / 55)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 12)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">5.88% <small>(1 / 17)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">25.45% <small>(14 / 55)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">app/profile/profile-education/bootcamp/</a> &#187; bootcamp.edit.controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function () {
+  'use strict';
+&nbsp;
+  angular
+    .module('app.profile')
+    .controller('BootcampEditController', BootcampEditController);
+&nbsp;
+  BootcampEditController.$inject = ['logger', '$q', '$rootScope', '$scope', '$timeout', 'profileStateService', 'usersService'];
+&nbsp;
+  /* @ngInject */
+<span class="fstat-no" title="function not covered" >  function BootcampEditController(logger, $q, $rootScope, $scope, $timeout, profileStateService, usersService) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var vm = this;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    vm.exitEditMode = exitEditMode;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    vm.bootcamp = null;</span>
+<span class="cstat-no" title="statement not covered" >    vm.editBootcampErrors = [];</span>
+<span class="cstat-no" title="statement not covered" >    vm.editBootcampAddSkill = {</span>
+      newSkill: "",
+      adding: false
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    vm.editBootcampDateRange = {</span>
+      Start: null,
+      End: null
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    vm.addBootcampSkill = addBootcampSkill;</span>
+<span class="cstat-no" title="statement not covered" >    vm.removeBootcampSkill = removeBootcampSkill;</span>
+<span class="cstat-no" title="statement not covered" >    vm.saveBootcamp = saveBootcamp;</span>
+<span class="cstat-no" title="statement not covered" >    vm.removeBootcamp = removeBootcamp;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    vm.init = init;</span>
+&nbsp;
+    /**initializes the controller with the single degree event instance this controller controls */
+<span class="fstat-no" title="function not covered" >    function init(bootcamp) {</span>
+<span class="cstat-no" title="statement not covered" >      vm.bootcamp = bootcamp;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      $scope.$watch("vm.editBootcampDateRange.Start", <span class="fstat-no" title="function not covered" >function () {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (vm.editBootcampDateRange.Start != null &amp;&amp; vm.bootcamp != null) {</span>
+<span class="cstat-no" title="statement not covered" >          vm.bootcamp.StartMonth = vm.editBootcampDateRange.Start.getMonth() + 1;</span>
+<span class="cstat-no" title="statement not covered" >          vm.bootcamp.StartYear = vm.editBootcampDateRange.Start.getFullYear();</span>
+        }
+      });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      $scope.$watch("vm.editBootcampDateRange.End", <span class="fstat-no" title="function not covered" >function () {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (vm.editBootcampDateRange.End != null &amp;&amp; vm.bootcamp != null) {</span>
+<span class="cstat-no" title="statement not covered" >          vm.bootcamp.EndMonth = vm.editBootcampDateRange.End.getMonth() + 1;</span>
+<span class="cstat-no" title="statement not covered" >          vm.bootcamp.EndYear = vm.editBootcampDateRange.End.getFullYear();</span>
+        }
+      });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (vm.bootcamp.StartYear) {</span>
+<span class="cstat-no" title="statement not covered" >        vm.editBootcampDateRange.Start = new Date(vm.bootcamp.StartYear, vm.bootcamp.StartMonth - 1);</span>
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (vm.bootcamp.EndYear) {</span>
+<span class="cstat-no" title="statement not covered" >        vm.editBootcampDateRange.End = new Date(vm.bootcamp.EndYear, vm.bootcamp.EndMonth - 1);</span>
+      }
+    }
+&nbsp;
+    /**exits edit mode */
+<span class="fstat-no" title="function not covered" >    function exitEditMode() {</span>
+<span class="cstat-no" title="statement not covered" >      $scope.$emit('profile.degree.edit.exitEditMode');</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function addBootcampSkill() {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      vm.editBootcampAddSkill.adding = false;</span>
+<span class="cstat-no" title="statement not covered" >      vm.bootcamp.Skills.push(vm.editBootcampAddSkill.newSkill);</span>
+<span class="cstat-no" title="statement not covered" >      vm.editBootcampAddSkill.newSkill = "";</span>
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function removeBootcampSkill(indexToRemove) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      vm.bootcamp.Skills.splice(indexToRemove, 1);</span>
+    }
+&nbsp;
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function saveBootcamp() {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      usersService.editBootcamp(vm.bootcamp)</span>
+        .then(success, error);
+&nbsp;
+<span class="fstat-no" title="function not covered" >      function success() {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        vm.exitEditMode();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >          usersService.getBootcamp(vm.bootcamp.ResumeElementId)</span>
+            .then(<span class="fstat-no" title="function not covered" >function (data) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >              var idx = profileStateService.currentUser.BootcampEvents.indexOf(vm.bootcamp);</span>
+<span class="cstat-no" title="statement not covered" >              profileStateService.currentUser.BootcampEvents[idx] = data;</span>
+&nbsp;
+            });
+&nbsp;
+        }, 2500);
+      }
+&nbsp;
+<span class="fstat-no" title="function not covered" >      function error(errors) {</span>
+<span class="cstat-no" title="statement not covered" >        vm.errors = errors;</span>
+      }
+    }
+&nbsp;
+        /**removes the degree event */
+<span class="fstat-no" title="function not covered" >    function removeBootcamp() {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >     usersService.removeBootcamp(vm.bootcamp.ResumeElementId)</span>
+        .then(success, error);
+&nbsp;
+<span class="fstat-no" title="function not covered" >      function success() {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        profileStateService.currentUser.BootcampEvents</span>
+          .splice(profileStateService.currentUser.BootcampEvents.indexOf(vm.bootcamp), 1);
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        vm.exitEditMode();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+&nbsp;
+          // load user scores
+&nbsp;
+        }, 2500);
+      }
+&nbsp;
+<span class="fstat-no" title="function not covered" >      function error(errors) {</span>
+<span class="cstat-no" title="statement not covered" >        vm.errors = errors;</span>
+      }
+    }
+&nbsp;
+&nbsp;
+  }
+})();
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 01 2016 16:00:40 GMT-0500 (COT)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

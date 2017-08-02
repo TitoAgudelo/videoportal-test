@@ -1,0 +1,411 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/profile/profile-experience/profile-experience.add.controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">app/profile/profile-experience/profile-experience.add.controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">22.64% <small>(12 / 53)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 10)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">7.69% <small>(1 / 13)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">22.64% <small>(12 / 53)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">app/profile/profile-experience/</a> &#187; profile-experience.add.controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function () {
+  'use strict';
+&nbsp;
+  angular
+    .module('app.profile')
+    .controller('ProfileExperienceAddController', ProfileExperienceAddController);
+&nbsp;
+  ProfileExperienceAddController.$inject = ['$scope', 'profileStateService', 'usersService', 'exception'];
+&nbsp;
+  /* @ngInject */
+<span class="fstat-no" title="function not covered" >  function ProfileExperienceAddController($scope, profileStateService, usersService, exception) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var vm = this;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    vm.addingExperience = false;</span>
+<span class="cstat-no" title="statement not covered" >    vm.newExperience = {</span>
+      Skills: [],
+      ProjectLinks: ['']
+    };
+<span class="cstat-no" title="statement not covered" >    vm.newExperienceDateRange = {</span>
+      Start: null,
+      End: null
+    };
+<span class="cstat-no" title="statement not covered" >    vm.addExperienceErrors = [];</span>
+<span class="cstat-no" title="statement not covered" >    vm.newExperienceNewSkill = '';</span>
+<span class="cstat-no" title="statement not covered" >    vm.addSkill = addSkill;</span>
+<span class="cstat-no" title="statement not covered" >    vm.removeSkill = removeSkill;</span>
+<span class="cstat-no" title="statement not covered" >    vm.addProjectLink = addProjectLink;</span>
+<span class="cstat-no" title="statement not covered" >    vm.removeProjectLink = removeProjectLink;</span>
+<span class="cstat-no" title="statement not covered" >    vm.addNewExperience = addNewExperience;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    vm.init = init;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    init();</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function init() {</span>
+<span class="cstat-no" title="statement not covered" >      $scope.$watch('vm.newExperienceDateRange.Start', <span class="fstat-no" title="function not covered" >function () {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (vm.newExperienceDateRange.Start != null) {</span>
+<span class="cstat-no" title="statement not covered" >          vm.newExperience.StartMonth = vm.newExperienceDateRange.Start.getMonth() + 1;</span>
+<span class="cstat-no" title="statement not covered" >          vm.newExperience.StartYear = vm.newExperienceDateRange.Start.getFullYear();</span>
+        }
+      });
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      $scope.$watch('vm.newExperienceDateRange.End', <span class="fstat-no" title="function not covered" >function () {</span></span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (vm.newExperienceDateRange.End != null) {</span>
+<span class="cstat-no" title="statement not covered" >          vm.newExperience.EndMonth = vm.newExperienceDateRange.End.getMonth() + 1;</span>
+<span class="cstat-no" title="statement not covered" >          vm.newExperience.EndYear = vm.newExperienceDateRange.End.getFullYear();</span>
+        }
+      });
+    }
+&nbsp;
+&nbsp;
+    /**adds a new skill to the new experience event */
+<span class="fstat-no" title="function not covered" >    function addSkill() {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      var skillExist = vm.newExperience.Skills.filter(<span class="fstat-no" title="function not covered" >function (s) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return s == vm.newExperienceNewSkill;</span>
+      }).length &gt; 0;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (!skillExist) {</span>
+<span class="cstat-no" title="statement not covered" >        vm.newExperienceEditSkills = false;</span>
+<span class="cstat-no" title="statement not covered" >        vm.newExperience.Skills.push(vm.newExperienceNewSkill);</span>
+      }
+<span class="cstat-no" title="statement not covered" >      vm.newExperienceNewSkill = '';</span>
+    };
+&nbsp;
+    /**removes a skill from the new experience event */
+<span class="fstat-no" title="function not covered" >    function removeSkill(indexToRemove) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      vm.newExperience.Skills.splice(indexToRemove, 1);</span>
+    };
+&nbsp;
+    /**adds a new project link from the new experience event  */
+<span class="fstat-no" title="function not covered" >    function addProjectLink() {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (vm.newExperience.ProjectLinks.indexOf("") == -1) {</span>
+<span class="cstat-no" title="statement not covered" >        vm.newExperience.ProjectLinks.push("");</span>
+      }
+    };
+&nbsp;
+    /**removes a project linkn from the new experience event */
+<span class="fstat-no" title="function not covered" >    function removeProjectLink(indexToRemove) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      vm.newExperience.ProjectLinks.splice(indexToRemove, 1);</span>
+    };
+&nbsp;
+    /**ads the new experience event */
+<span class="fstat-no" title="function not covered" >    function addNewExperience() {</span>
+&nbsp;
+      //TODO fix this accordingly to newEventAdded in the parent
+<span class="cstat-no" title="statement not covered" >      if (profileStateService.currentUser.ExperienceEvents.length == 0) {</span>
+<span class="cstat-no" title="statement not covered" >        $scope.hasFirstEventAdded = profileStateService.currentUser.ExperienceEvents.length == 0;</span>
+      }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return usersService.addExperience(vm.newExperience)</span>
+        .then(success, error);
+&nbsp;
+<span class="fstat-no" title="function not covered" >      function success(data) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        profileStateService.currentUser.ExperienceEvents.push(data);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        vm.addingExperience = false;</span>
+<span class="cstat-no" title="statement not covered" >        vm.newExperienceAddingProjectLinks = false;</span>
+<span class="cstat-no" title="statement not covered" >        vm.newExperience = {</span>
+          Skills: [],
+          ProjectLinks: [""]
+        };
+<span class="cstat-no" title="statement not covered" >        vm.addExperienceErrors = [];</span>
+<span class="cstat-no" title="statement not covered" >        vm.newExperienceDateRange = {</span>
+          Start: null,
+          End: null
+        };
+      };
+&nbsp;
+<span class="fstat-no" title="function not covered" >      function error(errors) {</span>
+<span class="cstat-no" title="statement not covered" >        vm.addExperienceErrors = errors;</span>
+      }
+    };
+  }
+})();
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 01 2016 16:00:40 GMT-0500 (COT)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

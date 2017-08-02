@@ -1,0 +1,70 @@
+$break-small: 320px;
+$break-small1: 414px;
+
+footer{
+  font-family  : 'Proxima Nova', sans-serif;
+    min-height: 15%;
+    background-color: #008E89;
+    padding-top: 2%;
+    .footer-logo{
+        max-width: 56px;
+    }        
+
+    .mixpanel{
+    background-color: #008E89;        
+        padding: 10px;
+    }
+    .col-sm-2{
+        strong{
+            text-transform: uppercase;
+            color:white;
+            font-weight: bolder;
+        }
+        ul{
+            list-style-type: none;
+            padding-left: 0;
+            li{
+                a{
+                    color:white;
+                }
+            }
+        }
+
+    }
+    @media screen and (max-width: $break-small) {
+        min-height: 17%;
+        font-size: 12px;
+        h4{
+            font-size: 18px;
+            font-family: Helvetica;
+            text-align: center;
+            color: white;
+        }
+        .footer-logo {
+              @media screen and (max-width: $break-small1) {
+                max-width: 56px;
+                margin-top: 4px;
+            }
+        }
+    }
+
+    .iOSDevice{
+        .footer-logo {
+            max-width: 56px;
+              @media screen and (max-width: $break-small1) {
+               max-width:56px;
+                margin-top: 4px;
+               
+            }          
+        }
+    }
+
+    @media screen and (max-width: 667px) {
+        min-height: 17%;
+        font-size: 12px;        
+        .footer-logo {
+            max-width:56px;
+            margin-top: 4px;  
+        }     
+    }  
+}

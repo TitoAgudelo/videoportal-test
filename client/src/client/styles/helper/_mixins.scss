@@ -1,0 +1,22 @@
+@mixin samewh($x){
+    width: $x;
+    height: $x;
+}
+@mixin backgroundSize($type) {
+  -webkit-background-size: $type;
+  -moz-background-size: $type;
+  -o-background-size: $type;
+  background-size: $type;
+}
+
+@mixin panelShadow(){
+    -webkit-box-shadow   : 2px 4px 14px 0 rgba(0,0,0,0.75);
+    -moz-box-shadow      : 2px 4px 14px 0 rgba(0,0,0,0.75);
+    box-shadow           : 2px 4px 14px 0 rgba(0,0,0,0.75);
+}
+.nopadding{
+  padding-left:0;
+  padding-right:0;
+  margin-left: 0;
+  margin-right:0;
+}

@@ -1,0 +1,18 @@
+<nav bs-affix data-offset-top="90" ng-controller="SidebarController as vm">
+    <ul>
+        <li ng-class="vm.isCurrent(r)" ng-repeat="r in vm.navRoutes">
+            <a ui-sref="{{r.name}}">
+                <div class="row">
+                    <div class="col-sm-3 col-md-3 col-sm-12 text-center" ng-bind-html="r.settings.content">
+                    </div>
+                    <div class="col-sm-5  col-md-9 visible-xs visible-sm visible-md visible-lg">
+                        <h3> {{r.title}}</h3>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div id="feedback-button">
+        <a href="mailto:feedback@careerscore.com"> <i class="fa fa-paper-plane"></i> Feedback</a>
+    </div>
+</nav>

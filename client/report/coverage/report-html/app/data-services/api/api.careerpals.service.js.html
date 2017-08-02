@@ -1,0 +1,705 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/data-services/api/api.careerpals.service.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header medium">
+    <h1>Code coverage report for <span class="entity">app/data-services/api/api.careerpals.service.js</span></h1>
+    <h2>
+        Statements: <span class="metric">57.14% <small>(4 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">100% <small>(0 / 0)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">50% <small>(1 / 2)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">57.14% <small>(4 / 7)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">app/data-services/api/</a> &#187; api.careerpals.service.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function () {
+  'use strict';
+&nbsp;
+  angular
+    .module('app.data')
+    .factory('apiCareerpals', apiCareerpals);
+&nbsp;
+  apiCareerpals.$inject = ['$http', '$q'];
+  /* @ngInject */
+<span class="fstat-no" title="function not covered" >  function apiCareerpals($http, $q) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var self = this;</span>
+<span class="cstat-no" title="statement not covered" >    var service = {</span>
+        users_me: [
+            {
+                "FirstName": "testera",
+                "Id": "97000207-66ce-4021-a995-dcda73d05467",
+                "IsProfileComplete": true,
+                "Languages": [],
+                "LastName": "a tree",
+                "Location": {
+                    "Latitude": 0,
+                    "Longitude": 0
+                },
+                "PictureUrl": "https://d13yacurqjgara.cloudfront.net/users/255/screenshots/2485618/mike-dribs.png",
+                "Scores": {
+                    "TotalScore": 161,
+                    "EducationScore": 33,
+                    "ExperienceScore": 108,
+                    "NetworkScore": 20,
+                    "ZScore": -1.1024162156680144,
+                    "ZScoreEducation": -0.45241654197448194,
+                    "ZScoreExperience": 0.8534163608434988,
+                    "ZScoreNetwork": 0
+                },
+                "TotalConnections": 0,
+                "Username": "testera3",
+                "YearsOfExperience": 29.27123287671233,
+                "BootcampEvents": [],
+                "Certifications": [],
+                "CourseEvents": [],
+                "DegreeEvents": [
+                    {
+                        "Degree": "M.A.",
+                        "EndMonth": 2016,
+                        "EndYear": 4,
+                        "IsCurrent": false,
+                        "Location": {
+                            "Latitude": 0,
+                            "Longitude": 0
+                        },
+                        "Minors": [],
+                        "ResumeElementId": "90e9f73b-d642-4dd1-9ad0-02ad11c944f4",
+                        "School": "Columbia University New York",
+                        "Skills": [],
+                        "StartMonth": 0,
+                        "StartYear": 0,
+                        "StudyAbroads": []
+                    }
+                ],
+                "ExperienceEvents": [
+                {
+                    "CompanyName": "ballerzzz",
+                    "Description": "Guoyuan Securities, China Customer Service Analyst\t  \t08 - 09/2014 \n \t  Explored potential customers using statistical analysis in R, and increased the sales of financial product by nearly 5% *ss*",
+                    "EndMonth": 5,
+                    "EndYear": 1989,
+                    "IsCurrent": true,
+                    "Location": {
+                        "RawLocation": "v y z",
+                        "City": "v y z",
+                        "Latitude": 0,
+                        "Longitude": 0
+                    },
+                    "ResumeElementId": "c726879d-f7c3-4248-bc19-355f42f63bb8",
+                    "Skills": [
+                        "R",
+                        "Sales",
+                        "",
+                        "ff",
+                        "aa",
+                        "hfghs"
+                    ],
+                    "StartMonth": 5,
+                    "StartYear": 1987,
+                    "Title": "Client Service Director"
+                },
+                {
+                  "CompanyName": "China Sim",
+                  "Description": " \nYX Investment Fund Management, China Data Analyst\t  \t09 - 10/2014 \n \t  Analyzed the historical data of 3000 Quasi-municipal Bonds in last 10 years, and built a predictive model in R for investment \n \tdepartment to use \n \t  Improved data usability in R including resolving missing values, reducing the dimension of the data, and segmenting the data \n \tproperly by different time buckets \n \t  Built a multiple regression model in R based on cleaned data to predict future value of Quasi-municipal Bonds \n",
+                  "EndMonth": 1,
+                  "EndYear": 2014,
+                  "IsCurrent": false,
+                  "Location": {
+                    "Latitude": 0,
+                    "Longitude": 0
+                  },
+                  "ResumeElementId": "9087a897-bf5e-4730-b4bd-e344735f4501",
+                  "Skills": [
+                    "Management",
+                    "Bonds",
+                    "R",
+                    "Usability",
+                    "mm",
+                    "HTML"
+                  ],
+                  "StartMonth": 2,
+                  "StartYear": 2009,
+                  "Title": "Data Analyst"
+                },
+                {
+                  "CompanyName": "China Merchants Bank  China Marketing",
+                  "Description": "Maintained customer relationship management system with accuracy, and updated 1000 customers' information using Excel \n \t  Assessed on average 50 customers' needs every day, and provided solutions to them \n   China Merchants Bank, China Marketing Intern\t  \t07 - 08/2013 \n \t  Assisted team on research and business analysis using Excel and its functions \n \t  Updated department weekly performance report and visualized data in R \n \t  Managed the database of over 10 thousand clients' information\n",
+                  "EndMonth": 8,
+                  "EndYear": 2013,
+                  "IsCurrent": false,
+                  "Location": {
+                    "Country": "Bonds",
+                    "CountryCode": "Bonds",
+                    "City": "Bonds",
+                    "Latitude": 0,
+                    "Longitude": 0
+                  },
+                  "ResumeElementId": "fa0603ad-1813-43fd-af86-93a02edc9ceb",
+                  "Skills": [
+                    "Auditing",
+                    "Management",
+                    "Microsoft Excel",
+                    "Marketing",
+                    "Research",
+                    "Business Analysis",
+                    "R",
+                    "Database"
+                  ],
+                  "StartMonth": 1,
+                  "StartYear": 2007,
+                  "Title": "Director of Internal Auditing"
+                }
+                ],
+                "GitHubProjects": [],
+                "Patents": [],
+                "Projects": [],
+                "Publications": [],
+                "Skills": [
+                {
+                  "Name": "R",
+                  "YearsInPractice": 29.27123287671233
+                },
+                {
+                  "Name": "Sales",
+                  "YearsInPractice": 29.27123287671233
+                },
+                {
+                  "Name": "ff",
+                  "YearsInPractice": 29.27123287671233
+                },
+                {
+                  "Name": "aa",
+                  "YearsInPractice": 29.27123287671233
+                },
+                {
+                  "Name": "hfghs",
+                  "YearsInPractice": 29.27123287671233
+                },
+                {
+                  "Name": "Management",
+                  "YearsInPractice": 7.087671232876712
+                },
+                {
+                  "Name": "Auditing",
+                  "YearsInPractice": 6.668493150684932
+                },
+                {
+                  "Name": "Microsoft Excel",
+                  "YearsInPractice": 6.668493150684932
+                },
+                {
+                  "Name": "Marketing",
+                  "YearsInPractice": 6.668493150684932
+                },
+                {
+                  "Name": "Research",
+                  "YearsInPractice": 6.668493150684932
+                },
+                {
+                  "Name": "Business Analysis",
+                  "YearsInPractice": 6.668493150684932
+                },
+                {
+                  "Name": "Database",
+                  "YearsInPractice": 6.668493150684932
+                },
+                {
+                  "Name": "Bonds",
+                  "YearsInPractice": 5
+                },
+                {
+                  "Name": "Usability",
+                  "YearsInPractice": 5
+                },
+                {
+                  "Name": "mm",
+                  "YearsInPractice": 5
+                },
+                {
+                  "Name": "HTML",
+                  "YearsInPractice": 5
+                },
+                {
+                  "Name": "",
+                  "YearsInPractice": 29.27123287671233
+                }
+                ],
+                "Volunteering": []
+                }
+        ],
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return service;</span>
+  }
+})();
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 01 2016 16:00:40 GMT-0500 (COT)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

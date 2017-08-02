@@ -1,0 +1,45 @@
+#main-content {
+	padding: 0;
+}
+
+.nav-community {
+    font-family  : 'Proxima Nova', sans-serif;
+	background-color: #58D6D2;
+    min-height: 80px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+
+    li {
+    	a {
+    		color: white;
+    		font-size: 14px;
+            text-transform: uppercase;
+
+    		&:hover {
+    			background-color: transparent;
+    		}
+    	}
+
+    	&.active {
+            &:after {
+                content: ' ';
+                width: 100%;
+                height: 3px;
+                border-bottom: 3px solid #ffee00;
+                display: inline-block;
+                position: absolute;
+                left: 0;
+                bottom: -23px;
+                z-index: 1;
+            }
+    		
+            a, a:hover {
+    			font-weight: bolder;
+    			background-color: transparent;
+    		}
+    	} 
+    }
+}

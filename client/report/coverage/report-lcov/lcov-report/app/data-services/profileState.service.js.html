@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/data-services/profileState.service.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">app/data-services/profileState.service.js</span></h1>
+    <h2>
+        Statements: <span class="metric">36% <small>(9 / 25)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">11.11% <small>(1 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">36% <small>(9 / 25)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">app/data-services/</a> &#187; profileState.service.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function () {
+  'use strict';
+&nbsp;
+  angular
+    .module('app.data')
+    .factory('profileStateService', profileStateService);
+&nbsp;
+  profileStateService.$inject = ['$http', '$rootScope', '$q', 'exception', 'logger', '$timeout', 'siteSettings', 'usersService'];
+&nbsp;
+  /* @ngInject */
+<span class="fstat-no" title="function not covered" >  function profileStateService($http, $rootScope, $q, exception, logger, $timeout, siteSettings, usersService) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var service = {</span>
+      currentUser: null,
+      activeBucket: '',
+      hasActiveBucket: hasActiveBucket,
+      loadCurrentUserDetails: loadCurrentUserDetails,
+      startLoadingCurrentUserScore: startLoadingCurrentUserScore,
+      currentUserHasScore: currentUserHasScore
+    };
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    return service;</span>
+&nbsp;
+    /**determines if the current user has scores */
+<span class="fstat-no" title="function not covered" >    function currentUserHasScore() {</span>
+<span class="cstat-no" title="statement not covered" >      if (service.currentUser == null) {</span>
+<span class="cstat-no" title="statement not covered" >        return false;</span>
+      }
+      else {
+<span class="cstat-no" title="statement not covered" >        return service.currentUser.Scores.TotalScore &gt; 0;</span>
+      }
+    }
+&nbsp;
+    /**loads details about the current logged in user, keep state in `currentUser` property */
+<span class="fstat-no" title="function not covered" >    function loadCurrentUserDetails(validate) {</span>
+<span class="cstat-no" title="statement not covered" >      return usersService.getUserDetails('me', validate)</span>
+        .then(<span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >          service.currentUser = data;</span>
+<span class="cstat-no" title="statement not covered" >          $rootScope.username = data.Username;</span>
+<span class="cstat-no" title="statement not covered" >          service.activeBucket = data.DesiredIndexingBucket;</span>
+<span class="cstat-no" title="statement not covered" >          return data;</span>
+        });
+    }
+&nbsp;
+    /**determines if the activeBucket has a value */
+<span class="fstat-no" title="function not covered" >    function hasActiveBucket() {</span>
+<span class="cstat-no" title="statement not covered" >      return service.activeBucket &amp;&amp; service.activeBucket.length &gt; 0;</span>
+    }
+&nbsp;
+&nbsp;
+    /**loads current logged in user scores from the server and updates the state.
+    will load scores every 1 second until some score is returned. 
+    */
+<span class="fstat-no" title="function not covered" >    function startLoadingCurrentUserScore() {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return usersService.getCurrentUserScores()</span>
+        .then(loadAgainIfZeroScore);
+&nbsp;
+<span class="fstat-no" title="function not covered" >      function loadAgainIfZeroScore(data) {</span>
+<span class="cstat-no" title="statement not covered" >        if (data.TotalScore == 0) {</span>
+<span class="cstat-no" title="statement not covered" >          $timeout(<span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >            service.startLoadingCurrentUserScore();</span>
+          }, 1000);
+        }
+        else {
+<span class="cstat-no" title="statement not covered" >          service.currentUser.Scores = data;</span>
+        }
+      }
+    }
+&nbsp;
+  }
+})();
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 01 2016 16:00:40 GMT-0500 (COT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,142 @@
+.modal-content{
+      button:active,
+      button:focus,
+      button:active,.btn:active,
+      .btn:focus,
+      .btn:active{
+          background-image: none;
+          outline: 0;
+          -webkit-box-shadow: none;
+                  box-shadow: none;
+          }
+
+    .modal-content .modal-body{
+        padding-top: 0px !important;
+    }
+    .modal-header{
+        border-bottom: none;
+        .modal-title{
+            text-align: center;
+        }
+        .modal-icon {
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            img {
+                height: 65px;
+            }
+        }
+        .almost{
+            color:#ACACAC;
+            font-size:35px;
+        }
+        .joinNow{
+            text-align: center;
+            font-weight: bold;
+            color: $green;
+            font-size:35px;
+        }
+        .joinText{
+            text-align: center;
+            color:#ACACAC;
+            font-size: 16px;
+        }
+        .successTitle{
+            text-align: center;
+            font-weight: bold;
+            font-size:35px;
+            color:#ACACAC;
+        }
+        .upSuccess{
+            text-align: center;
+            color:#ACACAC;
+            font-size: 16px;
+        }
+    }
+    .progress-bar{
+        background-color: $green;
+        color:white;
+        border-radius: 3px;
+    }
+    .progress{
+        height:35px;
+        border:solid 2px $green;
+        padding:2px;
+        border-radius: 3px;
+        margin-top:20px;
+    }
+    #contactInfo{
+        color:#B9B9B9;
+        .form-group{
+            margin-left:45px;
+            p{
+                color:$green;
+            }
+        }
+        .form-control{
+            width:470px;
+/*            background-color:#F4F2F3;*/
+            border-radius:3px;
+            color:#5779AE;
+            height:58px;
+            box-shadow: none;
+            border-width:0px;
+            border:none;
+        }
+    }
+    .modal-footer{
+        border-top: none;
+        padding: 50px;
+    }
+    #start{
+        #imgContainer{
+            display: flex;
+            justify-content: center;
+        }
+        h1{
+            text-align: center;
+        }
+    }
+    .modal-footer{
+        button{
+            color: white;
+            transition: background-color 700ms, color 700ms;
+            text-transform: uppercase;
+            &.btn-login {
+                background-color: #C85749;
+                border: 5px solid #2e2541;
+                border-radius: 5px;
+                &:hover{
+                    background-color: #28304E;
+                    color:white;
+                    transition: background-color 700ms, color 700ms;
+                }
+
+            }
+        }
+    }
+    i{
+        color: #24afaa;
+    }
+    .social-accounts{
+        text-align: center;
+        p{
+            text-align: center;
+        }
+        i{
+            margin-right: 20px;
+            text-align: center;
+        }
+    }
+}
+@media (max-width: 767px) {
+  .modal-content #contactInfo .form-control{
+    width: 100%;
+  }
+  .modal-content #contactInfo{
+    .form-group{
+      margin-left: 0;
+    }
+  }
+}

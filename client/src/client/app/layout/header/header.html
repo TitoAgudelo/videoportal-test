@@ -1,0 +1,36 @@
+<nav id="userNav" class="navbar navbar navbar-default navbar-static-top top-nav" role="navigation" ng-controller="HeaderController as vm">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="home">
+              <img src="images/rocket-ship.svg">
+            </a>
+        </div>
+        <div ng-show="vm.auth.isAuthenticated == false">
+            <ul class="nav navbar-nav navbar-right" ng-controller="LoginSignupCtaController as vm">
+                <li>
+                    <a class="btn" href="#" ng-click="vm.login()">Login</a>
+                </li>
+            </ul>
+        </div>
+        <ul class="nav navbar-nav navbar-right" ng-show="vm.auth.isAuthenticated == true">
+            <li id="userSpace" is-open="notificationDropdownIsOpen" uib-dropdown>
+                <div class="profile-pic pic-md">
+                    <span>{{vm.username}}</span>
+                    <img ng-mouseenter="displayTab = true" ng-mouseleave="displayTab = false" class="userImg img-responsive" no-image ng-if="!vm.profileState.currentUser.PictureUrl"
+                        ng-src="images/student.png" uib-dropdown-toggle />
+                </div>
+            </li>
+            <li id="gear" uib-dropdown>
+
+                <a class="btn" href="#" uib-dropdown-toggle><span class="fa fa-cog fa-2x"></span></a>
+
+                <ul class="uib-dropdown-menu dropdown-menu cog-menu" role="menu" aria-labelledby="single-button">
+                    <li role="menuitem">
+                        <a href="#" ng-click="vm.logoff()">LOGOFF</a>
+                    </li>
+                </ul>
+            </li>
+
+        </ul>
+    </div>
+</nav>

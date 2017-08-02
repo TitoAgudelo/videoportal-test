@@ -1,0 +1,104 @@
+.sideNav {
+    font-family  : 'Proxima Nova', sans-serif;
+    height: 100%;
+    background-color: #1d212a;
+    position: absolute;
+    padding-left: 15px;
+/*    width: 16.66666667%;*/
+/*    //padding-right: 6px;*/
+    #feedback-button{
+        position: fixed;
+        bottom: 0;
+        width: 152px;
+        background-color: #FD7122;
+        padding: 10px 18px;
+        font-size: 18px;
+        font-weight: 500;
+        a{
+            color: white;
+        }
+    }       
+    nav.affix {
+        height: 100%;
+        background-color: #1d212a;
+        padding-right: 15px;
+        top: 0;
+        width: 15.66666667%;
+    }
+    ul {
+        padding-top: 5%;
+        height: 100%;
+        list-style-type: none;
+        padding-left: 0;
+        li#not-clickable:hover{        
+            color: #626262; 
+            background-color: #1d212a;              
+        } 
+        li {
+            padding: 15px 10px 15px 15px;
+            border-radius: 0px 10px 10px 0px;
+            -moz-border-radius: 0px 10px 10px 0px;
+            -webkit-border-radius: 0px 10px 10px 0px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            color: #aaa;           
+            &:hover {
+                background-color: $lightAqua;
+                color:#008E89;
+                a{
+                    color:#008E89;                    
+                }
+            }
+            :active, :clicked, :current {
+                background-color: #24AFAA;
+                color: white ;
+
+                p {
+                    color: white ;
+                }
+
+                a {
+                    color: white ;
+                }
+            }
+            a{
+                color: #D6D4D4;            
+            }
+
+            &.turnOfHover {
+                background-color: initial !important;
+                color: #626262;
+            }
+
+            h3 {
+                text-transform: uppercase;
+                margin-top: 10px;
+                margin-bottom: 0px;
+                font-size: 1vw;
+            }
+
+            p {
+                text-align: right;
+                color: #24AFAA;
+                font-style: italic;
+                font-size: 1vw;
+            }
+
+            span {
+                font-size: 30px;
+            }
+        }
+        .activeli{
+            background-color: #24AFAA;
+            color: white;
+
+            p {
+                color: white;
+            }
+
+            a {
+                color: white;
+            }            
+        }
+    }     
+}

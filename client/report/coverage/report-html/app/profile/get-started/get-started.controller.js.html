@@ -1,0 +1,318 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/profile/get-started/get-started.controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">app/profile/get-started/get-started.controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">21.95% <small>(9 / 41)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 6)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">8.33% <small>(1 / 12)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">21.95% <small>(9 / 41)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">app/profile/get-started/</a> &#187; get-started.controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function () {
+  'use strict';
+&nbsp;
+  angular
+    .module('app.profile')
+    .controller('getStartedController', getStartedController);
+&nbsp;
+  getStartedController.$inject = ['logger', '$q', '$scope', '$rootScope', '$timeout', 'resumeUploadService'];
+  /* @ngInject */
+<span class="fstat-no" title="function not covered" >  function getStartedController(logger, $q, $scope, $rootScope, $timeout, resumeUploadService) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var vm = this;</span>
+<span class="cstat-no" title="statement not covered" >    vm.upload = upload;</span>
+<span class="cstat-no" title="statement not covered" >    vm.status = 'undetermined'; </span>// undetermined, uploading, pending, done, failed, 
+<span class="cstat-no" title="statement not covered" >    vm.currentResumeUploadOperationId = '';</span>
+<span class="cstat-no" title="statement not covered" >    vm.ready = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    activate();</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function activate() {</span>
+      // load current resume operation id and start getting status
+<span class="cstat-no" title="statement not covered" >      var activationPromises = [</span>
+        loadCurrentResumeUploadOperationId()
+      ];
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return $q.all(activationPromises);</span>
+    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.$watch('resumeFile', <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      vm.upload($scope.resumeFile);</span>
+    });
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var onTimeout = <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      loadResumeUploadOperationStatus();</span>
+<span class="cstat-no" title="statement not covered" >      timer = $timeout(onTimeout, 2000);</span>
+    };
+<span class="cstat-no" title="statement not covered" >    var timer = $timeout(onTimeout, 2000);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.$on("$destroy", <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      if (timer) {</span>
+<span class="cstat-no" title="statement not covered" >        $timeout.cancel(timer);</span>
+      }
+    });
+&nbsp;
+&nbsp;
+    /**gets the current resume upload operation id from the api */
+<span class="fstat-no" title="function not covered" >    function loadCurrentResumeUploadOperationId() {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      return resumeUploadService.getCurrentResumeUploadOperationId()</span>
+        .then(<span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >          vm.currentResumeUploadOperationId = data;</span>
+        });
+    }
+&nbsp;
+    /**gets the status of the current upload operationid and sets the status */
+<span class="fstat-no" title="function not covered" >    function loadResumeUploadOperationStatus() {</span>
+<span class="cstat-no" title="statement not covered" >      return resumeUploadService.getResumeStatusByOperationId(vm.currentResumeUploadOperationId)</span>
+        .then(<span class="fstat-no" title="function not covered" >function (data) {</span>
+<span class="cstat-no" title="statement not covered" >          vm.status = data.Status.toLowerCase();</span>
+<span class="cstat-no" title="statement not covered" >          vm.ready = true;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >          if (vm.status == 'failed') {</span>
+<span class="cstat-no" title="statement not covered" >            $timeout.cancel(timer);</span>
+          }
+        });
+    }
+&nbsp;
+    /**uploads a file provided  */
+<span class="fstat-no" title="function not covered" >    function upload(file) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      if (file) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        mixpanel.track("Profile - Upload Resume");</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        vm.status = 'uploading';</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        resumeUploadService.uploadResume(file)</span>
+          .then(resumeUploadSuccess);
+      }
+    };
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function resumeUploadSuccess(response) {</span>
+<span class="cstat-no" title="statement not covered" >      vm.status = 'pending';</span>
+<span class="cstat-no" title="statement not covered" >      vm.currentResumeUploadOperationId = response.data;</span>
+<span class="cstat-no" title="statement not covered" >      $rootScope.uploadOperationId = response.data;</span>
+<span class="cstat-no" title="statement not covered" >      $rootScope.$broadcast('Notifications', 'Update');</span>
+    }
+&nbsp;
+  }
+})();
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 01 2016 16:00:40 GMT-0500 (COT)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/account/login/login.controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">app/account/login/login.controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">25.81% <small>(8 / 31)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">8.33% <small>(1 / 12)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">25.81% <small>(8 / 31)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">app/account/login/</a> &#187; login.controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function () {
+  'use strict';
+&nbsp;
+  angular
+    .module('app.account')
+    .controller('LoginController', LoginController);
+&nbsp;
+  LoginController.$inject = [
+    'authService', 'logger', '$scope', '$rootScope',
+    '$http', 'returnUrl', 'siteSettings', '$location', 'routerHelper', '$state', '$uibModalInstance', 'md5'];
+&nbsp;
+  /* @ngInject */
+<span class="fstat-no" title="function not covered" >  function LoginController(authService, logger, $scope, $rootScope,</span>
+    $http, returnUrl, siteSettings, $location, routerHelper, $state, $uibModalInstance, md5) {
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    var vm = this;</span>
+<span class="cstat-no" title="statement not covered" >    vm.title = 'Login';</span>
+<span class="cstat-no" title="statement not covered" >    vm.login = login;</span>
+<span class="cstat-no" title="statement not covered" >    vm.logout = logout;</span>
+<span class="cstat-no" title="statement not covered" >    vm.close = close;</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $rootScope.$on('auth.login.close', <span class="fstat-no" title="function not covered" >function () {</span></span>
+<span class="cstat-no" title="statement not covered" >      $uibModalInstance.close();</span>
+    });
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function close() {</span>
+<span class="cstat-no" title="statement not covered" >      $uibModalInstance.close();</span>
+    }
+&nbsp;
+    /*performs login operation */
+<span class="fstat-no" title="function not covered" >    function login() {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      var passwordMD5 = md5.createHash($scope.user.password);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >      authService.login($scope.user.username, passwordMD5)</span>
+        .then(<span class="fstat-no" title="function not covered" >function (response) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >          $uibModalInstance.close();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >          if (returnUrl &amp;&amp; !(returnUrl == '/' || returnUrl.startsWith('/?')) ) {</span>
+<span class="cstat-no" title="statement not covered" >            $location.search('');</span>
+<span class="cstat-no" title="statement not covered" >            $location.path(returnUrl);</span>
+          }
+          else {
+<span class="cstat-no" title="statement not covered" >            var defaultRoute = getDefaultRoute();</span>
+<span class="cstat-no" title="statement not covered" >            $state.go('videos', {});</span>
+          }
+        }, <span class="fstat-no" title="function not covered" >function (err) {</span>
+<span class="cstat-no" title="statement not covered" >          $scope.signupErrorMsg = "Sorry, there was an error loging you in.";</span>
+        });
+&nbsp;
+    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >    function getDefaultRoute() {</span>
+<span class="cstat-no" title="statement not covered" >      return routerHelper.getStates().filter(<span class="fstat-no" title="function not covered" >function (r) {</span></span>
+<span class="cstat-no" title="statement not covered" >        return r.settings &amp;&amp; r.settings.isDefault;</span>
+      })[0];
+    }
+&nbsp;
+    /* performs loguout operation */
+<span class="fstat-no" title="function not covered" >    function logout() {</span>
+<span class="cstat-no" title="statement not covered" >      authService.logout()</span>
+        .then(<span class="fstat-no" title="function not covered" >function (response) {</span>
+<span class="cstat-no" title="statement not covered" >          $location.path('/');</span>
+        }, <span class="fstat-no" title="function not covered" >function (err) {</span>
+<span class="cstat-no" title="statement not covered" >          $scope.signupErrorMsg = "Sorry, there was an error loging you out. Try again";</span>
+        });
+    }
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >    $scope.user = {</span>
+      username: '',
+      password: '',
+      rememberme: true,
+    };
+&nbsp;
+  }
+})();
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Fri Jan 27 2017 21:29:02 GMT-0500 (COT)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

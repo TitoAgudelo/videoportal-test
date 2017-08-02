@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/profile/resume-verification/resume-verification.controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">app/profile/resume-verification/resume-verification.controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">22.58% <small>(7 / 31)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 8)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">20% <small>(1 / 5)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">22.58% <small>(7 / 31)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">app/profile/resume-verification/</a> &#187; resume-verification.controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function (window) {
+	'use strict'; //it wont allow bad syntax
+	var angular = window.angular;
+&nbsp;
+	angular
+		.module('app.profile')
+		.controller('ResumeVerificationController', ResumeVerificationController);
+&nbsp;
+	ResumeVerificationController.$inject = ['logger', '$scope', 'profileStateService', 'usersService'];
+&nbsp;
+	/* @ngInject */
+<span class="fstat-no" title="function not covered" >	function ResumeVerificationController(logger, $scope, profileStateService, usersService) {</span>
+<span class="cstat-no" title="statement not covered" >		var vm = this;</span>
+<span class="cstat-no" title="statement not covered" >		vm.title = 'ResumeVerification';</span>
+<span class="cstat-no" title="statement not covered" >		vm.profileState = profileStateService;</span>
+<span class="cstat-no" title="statement not covered" >		vm.done = done;</span>
+&nbsp;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		activate();</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >		function activate() {</span>
+&nbsp;
+			// load profile information with rules now.
+<span class="cstat-no" title="statement not covered" >			profileStateService.loadCurrentUserDetails(true);</span>
+&nbsp;
+		}
+&nbsp;
+		// on activate, get the userdata with verification rules, and show it here so the user can edit it
+		// at the end mark the profile as IsProfileVerified = true
+&nbsp;
+&nbsp;
+		// ----------------------SHOW SLIDE 2 AND HIDE SLIDE 1----------------------
+<span class="cstat-no" title="statement not covered" >		$scope.slide1 = true;</span>
+<span class="cstat-no" title="statement not covered" >		$scope.slide2 = true;</span>
+<span class="cstat-no" title="statement not covered" >		$scope.slide3 = false;</span>
+<span class="cstat-no" title="statement not covered" >		$scope.slide4 = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		$scope.nextStep = <span class="fstat-no" title="function not covered" >function (stepNumber) {</span></span>
+&nbsp;
+			// should go next if rules are still pending??????
+&nbsp;
+			// console.log("Next step firing for step...", stepNumber);
+			// hide all slides / steps
+<span class="cstat-no" title="statement not covered" >			$scope.slide1 = false;</span>
+<span class="cstat-no" title="statement not covered" >			$scope.slide2 = false;</span>
+<span class="cstat-no" title="statement not covered" >			$scope.slide3 = false;</span>
+<span class="cstat-no" title="statement not covered" >			$scope.slide4 = false;</span>
+&nbsp;
+			// only show the step that was passed in
+<span class="cstat-no" title="statement not covered" >			if (stepNumber == 1) {</span>
+<span class="cstat-no" title="statement not covered" >				$scope.slide1 = true;</span>
+			} else <span class="cstat-no" title="statement not covered" >if (stepNumber == 2) {</span>
+<span class="cstat-no" title="statement not covered" >				$scope.slide2 = true;</span>
+			} else <span class="cstat-no" title="statement not covered" >if (stepNumber == 3) {</span>
+<span class="cstat-no" title="statement not covered" >				$scope.slide3 = true;</span>
+			} else <span class="cstat-no" title="statement not covered" >if (stepNumber == 4) {</span>
+<span class="cstat-no" title="statement not covered" >				$scope.slide4 = true;</span>
+			}
+		};
+&nbsp;
+<span class="fstat-no" title="function not covered" >		function done() {</span>
+<span class="cstat-no" title="statement not covered" >			$state.go('profile');</span>
+		}
+	}
+})(window);
+&nbsp;
+&nbsp;
+// (function () {
+// 	'use strict';
+&nbsp;
+// 	angular
+// 		.module('app.onboarding')
+// 		.controller('OnboardingController', OnboardingController);
+&nbsp;
+// 	OnboardingController.$inject = [ 'logger', ];
+// 	/* @ngInject */
+// 	function OnboardingController(logger) {
+// 		var vm = this;
+// 		vm.title = 'Onboarding';
+&nbsp;
+//   }
+&nbsp;
+// // ----------------------SHOW SLIDE 2 AND HIDE SLIDE 1----------------------
+// 	$scope.slide1 = false;
+// 	$scope.slide2 = false;
+// 	$scope.slide3 = false;			
+// })();
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 01 2016 16:00:40 GMT-0500 (COT)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

@@ -1,0 +1,774 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/community/containers/containers.controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../prettify.css">
+    <link rel="stylesheet" href="../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">app/community/containers/containers.controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">13.77% <small>(19 / 138)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 65)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">3.57% <small>(1 / 28)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">13.77% <small>(19 / 138)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../index.html">All files</a> &#187; <a href="index.html">app/community/containers/</a> &#187; containers.controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function () {
+	'use strict';
+&nbsp;
+	angular
+		.module('app.community.containers')
+		.controller('ContainersController', ContainersController);
+&nbsp;
+	ContainersController.$inject = ['logger', 'containersService', '$scope', '$state', '$location',  'profileStateService'];
+	/* @ngInject */
+<span class="fstat-no" title="function not covered" >	function ContainersController(logger, containersService, $scope, $state,  $location, profileStateService) {</span>
+<span class="cstat-no" title="statement not covered" >		var vm = this;</span>
+<span class="cstat-no" title="statement not covered" >		vm.title = 'Containers';</span>
+<span class="cstat-no" title="statement not covered" >		vm.init = init;</span>
+<span class="cstat-no" title="statement not covered" >	    vm.containers = [];</span>
+	    // instance for get community container by id
+<span class="cstat-no" title="statement not covered" >	    vm.getContainer = getContainer;</span>
+	    // instance for create community container fn
+<span class="cstat-no" title="statement not covered" >	    vm.createContainer = createContainer;</span>
+	    // instance for delete community container by id
+<span class="cstat-no" title="statement not covered" >	    vm.deleteContainer = deleteContainer;</span>
+	    // instance for update community container by id
+<span class="cstat-no" title="statement not covered" >	    vm.updateContainer = updateContainer;</span>
+	    // instance for reset modal
+<span class="cstat-no" title="statement not covered" >	    vm.createModal = createModal;</span>
+	    // instance for function change color picker
+<span class="cstat-no" title="statement not covered" >	    vm.changeColor = changeColor;</span>
+	    // instance for change bg color of list container
+<span class="cstat-no" title="statement not covered" >	    vm.setColor = setColor;</span>
+	    // button create
+<span class="cstat-no" title="statement not covered" >	    vm.create = true;</span>
+	    // model form for create
+<span class="cstat-no" title="statement not covered" >	    vm.form = { ContainerName: '', ContainerDescription: '', ContainerColor: '', ContainerPicture: '' }</span>
+		// instance for list cotainers
+<span class="cstat-no" title="statement not covered" >	    vm.listContainers = listContainers;</span>
+	    // instance for get containers by username
+<span class="cstat-no" title="statement not covered" >	    vm.getContainersUser = getContainersUser;</span>
+	    // get current user
+<span class="cstat-no" title="statement not covered" >	    vm.getCurrentUser = getCurrentUser;</span>
+<span class="cstat-no" title="statement not covered" >	    vm.username = '';</span>
+		// instance for toggle function share
+<span class="cstat-no" title="statement not covered" >		vm.upload = upload;</span>
+		// instance function go to post
+<span class="cstat-no" title="statement not covered" >		vm.goToPost = goToPost;</span>
+<span class="cstat-no" title="statement not covered" >		$scope.collapsed = false;</span>
+		// validate user for public or private content
+<span class="cstat-no" title="statement not covered" >		vm.hasUser = hasUser;</span>
+		// share function
+<span class="cstat-no" title="statement not covered" >		vm.share = share;</span>
+		// request while backend response http request
+<span class="cstat-no" title="statement not covered" >		vm.request =  true;</span>
+<span class="cstat-no" title="statement not covered" >		vm.endpoint = false;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	    $scope.$watch('vm.containers', <span class="fstat-no" title="function not covered" >function (n, o) {</span></span>
+	        //vm.containers = n;
+<span class="cstat-no" title="statement not covered" >	        if (n || n == null) {</span>
+<span class="cstat-no" title="statement not covered" >	            vm.containers = n;</span>
+	        }
+	    });
+&nbsp;
+<span class="fstat-no" title="function not covered" >		function upload(file, errFile) {</span>
+<span class="cstat-no" title="statement not covered" >			if(file) {</span>
+<span class="cstat-no" title="statement not covered" >				$scope.onImage = false;</span>
+<span class="cstat-no" title="statement not covered" >				$scope.onImageModel = true;</span>
+<span class="cstat-no" title="statement not covered" >				return containersService.upload(file).then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >					if(data.statusText === "Created") {</span>
+<span class="cstat-no" title="statement not covered" >						vm.form.ContainerPicture = data.data.Url;</span>
+<span class="cstat-no" title="statement not covered" >						return vm.form.ContainerPicture;</span>
+					}
+				});
+			}
+		}
+&nbsp;
+<span class="fstat-no" title="function not covered" >	    function createModal() {</span>
+<span class="cstat-no" title="statement not covered" >	        vm.form = {};</span>
+<span class="cstat-no" title="statement not covered" >			vm.changeColor();</span>
+<span class="cstat-no" title="statement not covered" >			$('#myModal').modal('show');</span>
+<span class="cstat-no" title="statement not covered" >	        vm.create = true;</span>
+	    }
+&nbsp;
+	    // function for change background color on list containers
+<span class="fstat-no" title="function not covered" >	    function setColor(color, image) {</span>
+<span class="cstat-no" title="statement not covered" >	    	if(image) {</span>
+<span class="cstat-no" title="statement not covered" >	    		var style = {"background-image": "url("+image+") no-repeat center center" };</span>
+	    	} else {
+<span class="cstat-no" title="statement not covered" >				var style = { "background-color": color };</span>
+<span class="cstat-no" title="statement not covered" >	        	return style;</span>
+	    	}
+	    }
+&nbsp;
+    	// function for change color of create or update icon color picker
+<span class="fstat-no" title="function not covered" >	    function changeColor() {</span>
+<span class="cstat-no" title="statement not covered" >	        var color = vm.form.ContainerColor;</span>
+<span class="cstat-no" title="statement not covered" >	        if (color || color != '') {</span>
+<span class="cstat-no" title="statement not covered" >	            vm.colorStyle = { color: color };</span>
+	        } else {
+<span class="cstat-no" title="statement not covered" >	            vm.colorStyle = { color: '#222' };</span>
+	        }
+	    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >	    function getCurrentUser() {</span>
+<span class="cstat-no" title="statement not covered" >	      	return profileStateService.loadCurrentUserDetails().then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >	        	vm.username = data.Username;</span>
+<span class="cstat-no" title="statement not covered" >	        	return vm.username;</span>
+	      	});
+	    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >	    function goToPost(containerId, containerName) {</span>
+<span class="cstat-no" title="statement not covered" >	    	$state.go('containersPost', {containerId: containerId, username: vm.currentUserName, containerName: containerName});</span>
+	    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >	    function listContainers() {</span>
+<span class="cstat-no" title="statement not covered" >	    	vm.getCurrentUser();</span>
+<span class="cstat-no" title="statement not covered" >			if(vm.request &amp;&amp; vm.endpoint){</span>
+<span class="cstat-no" title="statement not covered" >				vm.containers = containersService.getCommunityContainers();</span>
+<span class="cstat-no" title="statement not covered" >				return;</span>
+			}
+<span class="cstat-no" title="statement not covered" >			return containersService.getCommunityContainers().then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >				vm.containers = data;</span>
+<span class="cstat-no" title="statement not covered" >				return vm.containers;</span>
+			});
+	    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >	    function getContainer(containerId) {</span>
+	        //function for get community container by id
+<span class="cstat-no" title="statement not covered" >	        vm.create = false;</span>
+<span class="cstat-no" title="statement not covered" >	        var userId = "12c68cb905d2475dbdc3231a00531c00";</span>
+<span class="cstat-no" title="statement not covered" >	        if (userId &amp;&amp; containerId) {</span>
+<span class="cstat-no" title="statement not covered" >				if(vm.request &amp;&amp; vm.endpoint){</span>
+<span class="cstat-no" title="statement not covered" >	        		$('#myModal').modal('show');</span>
+<span class="cstat-no" title="statement not covered" >					vm.form = containersService.getCommunityContainer(userId, containerId);</span>
+<span class="cstat-no" title="statement not covered" >					$scope.onImage = false;</span>
+<span class="cstat-no" title="statement not covered" >					if(vm.form.ContainerPicture) {</span>
+<span class="cstat-no" title="statement not covered" >						$scope.onImageModel = true;</span>
+					} else {
+<span class="cstat-no" title="statement not covered" >						$scope.onImageModel = false;</span>
+					}
+<span class="cstat-no" title="statement not covered" >					vm.changeColor();</span>
+<span class="cstat-no" title="statement not covered" >					return;</span>
+				}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >				return containersService.getCommunityContainer(userId, containerId).then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >	        		$('#myModal').modal('show');</span>
+<span class="cstat-no" title="statement not covered" >	            	vm.form = data;</span>
+<span class="cstat-no" title="statement not covered" >	            	$scope.onImage = false;</span>
+<span class="cstat-no" title="statement not covered" >					if(vm.form.ContainerPicture) {</span>
+<span class="cstat-no" title="statement not covered" >						$scope.onImageModel = true;</span>
+					} else {
+<span class="cstat-no" title="statement not covered" >						$scope.onImageModel = false;</span>
+					}
+<span class="cstat-no" title="statement not covered" >					vm.changeColor();</span>
+<span class="cstat-no" title="statement not covered" >	            	return vm.form;</span>
+	        	});
+			}
+	    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >	    function createContainer() {</span>
+	        //function for create community container
+<span class="cstat-no" title="statement not covered" >	        vm.create = true;</span>
+<span class="cstat-no" title="statement not covered" >			if (vm.form.ContainerName){</span>
+<span class="cstat-no" title="statement not covered" >				if(vm.request &amp;&amp; vm.endpoint){</span>
+<span class="cstat-no" title="statement not covered" >					vm.containers = containersService.createCommunityContainer(vm.form);</span>
+<span class="cstat-no" title="statement not covered" >					return;</span>
+				}
+<span class="cstat-no" title="statement not covered" >				containersService.createCommunityContainer(vm.form).then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >					if(data.statusText === "OK") {</span>
+<span class="cstat-no" title="statement not covered" >						vm.listContainers();</span>
+					}
+	        	});
+			}
+	    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >	    function deleteContainer(containerId) {</span>
+	        //function for delete community container by id
+<span class="cstat-no" title="statement not covered" >	        if (containerId) {</span>
+<span class="cstat-no" title="statement not covered" >				if(vm.request &amp;&amp; vm.endpoint){</span>
+<span class="cstat-no" title="statement not covered" >					vm.containers = containersService.deleteCommunityContainer(containerId);</span>
+<span class="cstat-no" title="statement not covered" >					return;</span>
+				}
+<span class="cstat-no" title="statement not covered" >				return containersService.deleteCommunityContainer(containerId).then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >					if(data.statusText === "OK") {</span>
+<span class="cstat-no" title="statement not covered" >						vm.listContainers();</span>
+					}
+				});
+			}
+	    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >	    function getContainersUser(username) {</span>
+<span class="cstat-no" title="statement not covered" >	    	if(username) {</span>
+<span class="cstat-no" title="statement not covered" >	    		return containersService.getContainersByUsername(username).then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >					vm.containers = data;</span>
+<span class="cstat-no" title="statement not covered" >					return vm.containers;</span>
+				});
+	    	}
+	    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >	    function updateContainer() {</span>
+	        //function for update community container by id
+<span class="cstat-no" title="statement not covered" >	        if (vm.form.ContainerId &amp;&amp; vm.form.ContainerName &amp;&amp; vm.form.ContainerDescription) {</span>
+	        
+<span class="cstat-no" title="statement not covered" >				if(vm.request &amp;&amp; vm.endpoint){</span>
+<span class="cstat-no" title="statement not covered" >					vm.containers = containersService.updateCommunityContainer(vm.form);</span>
+<span class="cstat-no" title="statement not covered" >					return;</span>
+				}
+<span class="cstat-no" title="statement not covered" >				return containersService.updateCommunityContainer(vm.form).then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >					if(data.statusText === "OK") {</span>
+<span class="cstat-no" title="statement not covered" >						vm.listContainers();</span>
+					}
+				});
+			}
+	    }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >	    $scope.shareToggle = <span class="fstat-no" title="function not covered" >function($event) {</span></span>
+<span class="cstat-no" title="statement not covered" >	    	$event.stopPropagation();</span>
+	    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >	    function share($event) {</span>
+<span class="cstat-no" title="statement not covered" >	    	$event.stopPropagation();</span>
+	    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >	    function hasUser() {</span>
+<span class="cstat-no" title="statement not covered" >	    	if(vm.currentUserName &amp;&amp; vm.username) {</span>
+<span class="cstat-no" title="statement not covered" >	    		if(vm.currentUserName === vm.username) {</span>
+<span class="cstat-no" title="statement not covered" >	    			vm.canEdit = true;</span>
+<span class="cstat-no" title="statement not covered" >	    			vm.listContainers();</span>
+	    		} else {
+<span class="cstat-no" title="statement not covered" >	    			vm.canEdit = false;</span>
+<span class="cstat-no" title="statement not covered" >	    			vm.userBy = vm.currentUserName;</span>
+<span class="cstat-no" title="statement not covered" >	    			vm.getContainersUser(vm.currentUserName);</span>
+	    		}
+	    	}
+	    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >	    function init() {</span>
+<span class="cstat-no" title="statement not covered" >			vm.currentUserName = $state.params.username;</span>
+<span class="cstat-no" title="statement not covered" >			vm.userBy = '';</span>
+<span class="cstat-no" title="statement not covered" >			vm.getCurrentUser().then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >				vm.hasUser();</span>
+			});
+		}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		vm.init();</span>
+  }
+})();
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 01 2016 16:00:40 GMT-0500 (COT)</div>
+</div>
+<script src="../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../sorter.js"></script>
+</body>
+</html>

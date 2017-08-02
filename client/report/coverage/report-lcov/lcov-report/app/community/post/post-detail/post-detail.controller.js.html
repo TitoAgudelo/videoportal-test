@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/community/post/post-detail/post-detail.controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../../../prettify.css">
+    <link rel="stylesheet" href="../../../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">app/community/post/post-detail/post-detail.controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">23.81% <small>(10 / 42)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 4)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">8.33% <small>(1 / 12)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">23.81% <small>(10 / 42)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../../../index.html">All files</a> &#187; <a href="index.html">app/community/post/post-detail/</a> &#187; post-detail.controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function () {
+	'use strict';
+&nbsp;
+	angular
+		.module('app.community.post')
+		.controller('PostDetailController', PostDetailController);
+&nbsp;
+	PostDetailController.$inject = ['logger', '$scope', 'postService', '$state', 'profileStateService', 'authService'];
+	/* @ngInject */
+<span class="fstat-no" title="function not covered" >	function PostDetailController(logger, $scope, postService, $state, profileStateService, authService) {</span>
+<span class="cstat-no" title="statement not covered" >		var vm = this;</span>
+<span class="cstat-no" title="statement not covered" >		vm.post = [];</span>
+<span class="cstat-no" title="statement not covered" >		vm.request = true;</span>
+<span class="cstat-no" title="statement not covered" >		vm.endPoint = false;</span>
+<span class="cstat-no" title="statement not covered" >		vm.title = 'Post';</span>
+<span class="cstat-no" title="statement not covered" >		vm.init = init;</span>
+<span class="cstat-no" title="statement not covered" >		vm.public = true;</span>
+<span class="cstat-no" title="statement not covered" >		vm.getCurrentUser = getCurrentUser;</span>
+		// instance get single post
+<span class="cstat-no" title="statement not covered" >		vm.getPost = getPost;</span>
+<span class="cstat-no" title="statement not covered" >		vm.getMomentDate = getMomentDate;</span>
+		// instance for follow and unfollow
+<span class="cstat-no" title="statement not covered" >		vm.follow = follow;</span>
+<span class="cstat-no" title="statement not covered" >		vm.unfollow = unfollow;</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >		function getPost() {</span>
+<span class="cstat-no" title="statement not covered" >			return postService.getCommunityPost(vm.postId).then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >				vm.post = vm.getMomentDate(data);</span>
+<span class="cstat-no" title="statement not covered" >				return vm.post;</span>
+			});
+		}
+&nbsp;
+<span class="fstat-no" title="function not covered" >		function getMomentDate(post) {</span>
+<span class="cstat-no" title="statement not covered" >			if(post.PostedOnUtc) {</span>
+<span class="cstat-no" title="statement not covered" >				post.PostedOnUtc = moment(post.PostedOnUtc).startOf('day').fromNow();</span>
+			}  
+<span class="cstat-no" title="statement not covered" >			return post;</span>
+		}
+&nbsp;
+<span class="fstat-no" title="function not covered" >		function follow(id, type) {</span>
+<span class="cstat-no" title="statement not covered" >			return postService.followPost(id, type).then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >				vm.getPost();</span>
+			});
+&nbsp;
+		}
+&nbsp;
+<span class="fstat-no" title="function not covered" >		function unfollow(id, type) {</span>
+<span class="cstat-no" title="statement not covered" >			return postService.unfollowPost(id, type).then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >				vm.getPost();</span>
+			});
+&nbsp;
+		}
+&nbsp;
+<span class="fstat-no" title="function not covered" >		function getCurrentUser() {</span>
+<span class="cstat-no" title="statement not covered" >	      	return profileStateService.loadCurrentUserDetails().then(<span class="fstat-no" title="function not covered" >function(data) {</span></span>
+<span class="cstat-no" title="statement not covered" >	        	vm.username = data.Username;</span>
+<span class="cstat-no" title="statement not covered" >	        	return vm.username;</span>
+	      	});
+	    }
+&nbsp;
+<span class="fstat-no" title="function not covered" >		function init() {</span>
+<span class="cstat-no" title="statement not covered" >			vm.currentUserName = $state.params.username;</span>
+<span class="cstat-no" title="statement not covered" >			vm.postId = $state.params.postId;</span>
+<span class="cstat-no" title="statement not covered" >			if(authService.isAuthenticated) {</span>
+<span class="cstat-no" title="statement not covered" >				vm.getCurrentUser();</span>
+			} else {
+<span class="cstat-no" title="statement not covered" >				vm.public = false;</span>
+			}
+<span class="cstat-no" title="statement not covered" >			vm.getPost();</span>
+		}
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		vm.init();</span>
+  	}
+})();
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Mon Aug 01 2016 16:00:40 GMT-0500 (COT)</div>
+</div>
+<script src="../../../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../../../sorter.js"></script>
+</body>
+</html>

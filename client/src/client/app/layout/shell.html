@@ -1,0 +1,15 @@
+<div id="userLayout" ng-controller="ShellController as vm">
+
+    <div ng-include="'app/layout/header/header.html'"></div>
+
+    <div id="layout" class="row" ng-if="isNotShellPage()">
+        <div class="hidden-xs col-sm-2 col-md-2 sideNav affix">
+
+            <div ng-include="'app/layout/sidebar/sidebar.html'"></div>
+
+        </div>
+    </div>
+    <div id="main-content">
+        <div ui-view></div>
+    </div>
+</div>

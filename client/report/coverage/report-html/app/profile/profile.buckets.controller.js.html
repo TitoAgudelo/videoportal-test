@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for app/profile/profile.buckets.controller.js</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../../prettify.css">
+    <link rel="stylesheet" href="../../base.css">
+    <style type='text/css'>
+        div.coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class="header low">
+    <h1>Code coverage report for <span class="entity">app/profile/profile.buckets.controller.js</span></h1>
+    <h2>
+        Statements: <span class="metric">30.3% <small>(10 / 33)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Branches: <span class="metric">0% <small>(0 / 2)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Functions: <span class="metric">11.11% <small>(1 / 9)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Lines: <span class="metric">30.3% <small>(10 / 33)</small></span> &nbsp;&nbsp;&nbsp;&nbsp;
+        Ignored: <span class="metric"><span class="ignore-none">none</span></span> &nbsp;&nbsp;&nbsp;&nbsp;
+    </h2>
+    <div class="path"><a href="../../index.html">All files</a> &#187; <a href="index.html">app/profile/</a> &#187; profile.buckets.controller.js</div>
+</div>
+<div class="body">
+<pre><table class="coverage">
+<tr><td class="line-count">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73</td><td class="line-coverage"><span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">(function () {
+	'use strict';
+&nbsp;
+	angular
+		.module('app.profile')
+		.controller('ProfileBucketsController', ProfileBucketsController);
+&nbsp;
+	ProfileBucketsController.$inject = ['logger', '$q', '$rootScope', '$scope', '$timeout', 'Upload', 'usersService', 'profileStateService'];
+	/* @ngInject */
+<span class="fstat-no" title="function not covered" >	function ProfileBucketsController(logger, $q, $rootScope, $scope, $timeout, Upload, usersService, profileStateService) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		var vm = this;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		vm.buckets = [];</span>
+<span class="cstat-no" title="statement not covered" >		vm.newBucket = '';</span>
+<span class="cstat-no" title="statement not covered" >		vm.bucketDDIsOpen = false;</span>
+<span class="cstat-no" title="statement not covered" >		vm.getActiveBucket = getActiveBucket;</span>
+<span class="cstat-no" title="statement not covered" >		vm.hasActiveBucket = hasActiveBucket;</span>
+<span class="cstat-no" title="statement not covered" >		vm.addBucket = addBucket;</span>
+<span class="cstat-no" title="statement not covered" >		vm.updateBucket = updateBucket;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >		activate();</span>
+&nbsp;
+<span class="fstat-no" title="function not covered" >		function activate() {</span>
+<span class="cstat-no" title="statement not covered" >			return getSupportedBuckets();</span>
+		}
+&nbsp;
+		/**gets the list of buckets that we support */
+<span class="fstat-no" title="function not covered" >		function getSupportedBuckets() {</span>
+<span class="cstat-no" title="statement not covered" >			return usersService.getSupportedBuckets().then(<span class="fstat-no" title="function not covered" >function (data) {</span></span>
+<span class="cstat-no" title="statement not covered" >				vm.buckets = data;</span>
+<span class="cstat-no" title="statement not covered" >				return vm.buckets;</span>
+			});
+		}
+&nbsp;
+		/**determines if there is a value in the activeBucket property */
+<span class="fstat-no" title="function not covered" >		function hasActiveBucket() {</span>
+<span class="cstat-no" title="statement not covered" >			return profileStateService.hasActiveBucket();</span>
+		}
+&nbsp;
+		/**gets the active bucket */
+<span class="fstat-no" title="function not covered" >    function getActiveBucket() {</span>
+<span class="cstat-no" title="statement not covered" >      return profileStateService.activeBucket;</span>
+    }
+&nbsp;
+&nbsp;
+		/**adds a new bucket to the list of buckets */
+<span class="fstat-no" title="function not covered" >		function addBucket(event) {</span>
+<span class="cstat-no" title="statement not covered" >			if (event.which === 13) //the user hit the enter key</span>
+			{
+<span class="cstat-no" title="statement not covered" >				vm.buckets.push(vm.newBucket);</span>
+<span class="cstat-no" title="statement not covered" >				vm.newBucket = '';</span>
+<span class="cstat-no" title="statement not covered" >				event.preventDefault();</span>
+			}
+		};
+&nbsp;
+		/**updates the current bucket */
+<span class="fstat-no" title="function not covered" >		function updateBucket(option) {</span>
+&nbsp;
+			// set new bucket as active 
+<span class="cstat-no" title="statement not covered" >			profileStateService.activeBucket = option;</span>
+&nbsp;
+			// send new bucket to server
+<span class="cstat-no" title="statement not covered" >			usersService.updateUserBucket(option);</span>
+&nbsp;
+			// start loading scores until we get a score back
+<span class="cstat-no" title="statement not covered" >			profileStateService.startLoadingCurrentUserScore();</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >			vm.bucketDDIsOpen = false;</span>
+		};
+  }
+})();
+&nbsp;</pre></td></tr>
+</table></pre>
+
+</div>
+<div class="footer">
+    <div class="meta">Generated by <a href="http://istanbul-js.org/" target="_blank">istanbul</a> at Thu Jun 09 2016 09:39:27 GMT-0500 (COT)</div>
+</div>
+<script src="../../prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="../../sorter.js"></script>
+</body>
+</html>

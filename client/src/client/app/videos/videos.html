@@ -1,0 +1,34 @@
+<section id="videos-view" class="mainbar">
+  <div>
+    <!--<div class="col-md-9">
+        <video ng-src="{{url}}" controls width="600"></video>
+        <br/>
+        <h4>{{name}}</h4>
+        <br/>
+        Rating: <span uib-rating ng-model="averageRating" max="5" read-only="1" titles="['one','two','three','four', 'Five']" aria-labelledby="default-rating"></span>
+        <span class="pull-right">Rate Video:
+            <span uib-rating ng-model="initialRate" max="5" read-only="0" on-hover="hoveringOver(value)"  titles="['one','two','three','four','five']" aria-labelledby="default-rating" ng-click="rateVideo(video_id, initialRate)"></span>
+        </span>
+        <br/>
+        <h5>{{description}}</h5>
+    </div>-->
+    <div class="container">
+        <div class="video-content">
+            <div ng-repeat="video in vm.videos" class="col-thirds">
+                <div>
+                    <h4 class="video-title"><a href="#/watch/v={{video._id}}">{{video.name}}</a></h4>
+                    <video class="video-listing" width="290" height="200" controls>
+                      <source src="{{video.url}}" type="video/mp4">
+                    </video>
+                    <div class="video-rating">
+                      <div ng-init="avg = vm.averageRate(video.ratings)"></div>
+                      <b>Rate Now:</b> <span uib-rating ng-model="vm.initialRate" max="5" read-only="0" on-hover="vm.hoveringOver(value)"  titles="['one','two','three','four','five']" aria-labelledby="default-rating" ng-click="vm.rateVideo(video._id, initialRate)"></span></div>
+                    <p class="video-description">{{video.description}}</p>
+                    <br/>
+                </div>
+            </div>
+      </div>
+
+    </div>
+  </div>
+</section>
